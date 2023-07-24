@@ -4,8 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding Quiz</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <!--outer div containing all divs of application-->
+    <div class="outer-div">
+        <!--Nav Bar div-->
+        <div class="nav-bar">
+            <a href="/assets/highscore.html">View High Scores</a>
+            <p class="Timer">Timer</p>
+            <!--Inner Div containing quiz aspects-->
+            <div class="inner-div">
+                <header class="intro">
+                    <br>
+                    <br>
+                    <h1>Welcome: JavaScript Quiz!</h1><br>
+                    <p>Press <strong>START </strong>to begin the quiz.</p><br>
+                    <button>Start</button>
+                </header>
+                <main class="main">
+                    <section class="Questions">
+                        <h3>Questions</h3>
+                        <!--will be created in JS-->
+                            <ul>
+                                <li><button>Answer 1</button></li>
+                                <li><button>Answer 2</button></li>
+                                <li><button>Answer 3</button></li>
+                                <li><button>Answer 4</button></li>
+                            </ul>
+                            
+                    </section>
+                    <section class="Final-Display">
+                        <div>
+                            <h2>All Done!</h2>
+                            <!--will be created in JS-->
+                            <p>Final score: </p>
+                            <label for="">Enter Initials</label>
+                            <input type="text">
+                            <button>Submit</button>
+                    <section class="Highscores">
+                        <h3>*High Scores*</h3>
+                        <!--will be created in JS-->
+                        <ol>
+                            
+                            <li>ab - 21</li>
+                            <li>ab - 21</li>
+                            <li>ab - 21</li>
+                            <li>ab - 21</li>
+                        </ol>
+                        <button>Go Back</button>
+                        <button>Clear High Scores</button>
+                    </section>
+                        </div>
+                    </section>
+                </main>
+            </div>
+
+        </div>
+
+    </div>
 </body>
 </html>
