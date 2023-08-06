@@ -42,20 +42,15 @@
 }
 
 /*contains quiz*/
-.main {
-   display: none;
 
-}
 
 button {
     background-color: rgb(112, 4, 76);
     color: white;   
 }
 
-/*Questions Display*/
-.Questions {
-    display: none;
-}
+
+
 /*Final End of Quiz Display*/
 .Final-Display {
     display: block;
