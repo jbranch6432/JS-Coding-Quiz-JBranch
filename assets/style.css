@@ -5,7 +5,11 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.outer-div {
+.hide{
+    display: none;
+}
+
+/* .outer-div {
     padding: 20px;
     height: 100vh;
     display: flex;
@@ -29,17 +33,17 @@
     padding: 0;
     position:sticky;
     display: block;
-}
+} */
 
 /*Counting timer for quiz*/
-.Timer {
+/* .Timer {
   float: right;  
-}
+} */
 
 /*header to start the quiz with welcome*/
-.intro, .main{
+/* .intro, .main {
   text-align: center; 
-}
+} */
 
 /*contains quiz*/
 
@@ -51,7 +55,7 @@ button {
 
 
 
-/*Final End of Quiz Display*/
+/* Final End of Quiz Display
 .Final-Display {
     display: block;
-}
+} */
