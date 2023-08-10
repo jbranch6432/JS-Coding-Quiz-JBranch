@@ -1,30 +1,34 @@
 var highScoresPage = document.getElementById('scoreResults');
 var clearBtn = document.getElementById('clear');
+var endScoresList = JSON.parse(localStorage.getItem("score")) || [];
+var restartBtn = document.getElementById('restartQuiz');
 
-function retrieveScores() {
-    var endScoresList = JSON.parse(localStorage.getItem("score"));
-    displayScores(endScoresList);
-}
 
-function displayScores(scoreData) {
-    for(var i=0; i < scoreData.length; i++){
+function displayScores() {
+    for (var i = 0; i < endScoresList.length; i++) {
         var listItem = document.createElement("li");
-        console.log(scoreData[i]);
-        listItem.innerHTML = (scoreData[i].userInitial + "-" + scoreData[i].userScore);
+        console.log(endScoresList[i]);
+        listItem.innerHTML = (endScoresList[i].userInitial + "-" + endScoresList[i].userScore);
         highScoresPage.appendChild(listItem);
     }
 }
 
 function clearScores() {
     localStorage.clear();
-    console.log(clearScores);
+     window.location.reload()
+
 }
 
-retrieveScores();
+ function restartOver() {
+    window.location.href = 'index.html'
+ }
+
+
+ displayScores()
 
 
 
 
 
-clearBtn.addEventListener("click", clearScores);
-
+ clearBtn.addEventListener('click', clearScores);
+ restartBtn.addEventListener("click", restartOver);

@@ -9,13 +9,13 @@
 </head>
 
 <body>
-    <!--outer div containing all divs of application-->
 
     <header>
-        <a href="./assets/highscore.html">View High Scores</a>
+        <a href="./highscore.html">View High Scores</a>
         <p id="timer">Timer</p>
     </header>
     <main>
+        <!--Welcome Page- first page users see-->
         <section id="first">
             <h1>Welcome: JavaScript Quiz!</h1><br>
             <p>Try to answer the following JS-related questions within the timelimit. Incorrect answers will
@@ -28,54 +28,16 @@
 
         </section>
         <section class="Final-Display hide">
-            <div>
                 <h2>All Done!</h2>
-                <!--will be created in JS-->
+                <!--will be created in JS: collects user's initials-->
                 <p>Final score: <span id="finalScore"></span> </p>
                 <label for="initials">Enter Initials</label>
                 <input type="text" id="initials">
                 <button id="submit">Submit</button>
-
-            </div>
-        </section>
-        <section class="Highscores hide" >
-            <h3>*High Scores*</h3>
-            <!--will be created in JS-->
-            <ol id="scores">
-                <!-- <li>ab - 21</li>
-                <li>ab - 21</li>
-                <li>ab - 21</li>
-                <li>ab - 21</li> -->
-            </ol>
-            <button id="return">Go Back</button>
-            <button id="clearScores">Clear High Scores</button>
         </section>
     </main>
     <footer></footer>
-    <!-- <div class="outer-div"> -->
-    <!--Nav Bar div-->
-    <!-- <div class="nav-bar"> -->
-
-    <!--Inner Div containing quiz aspects-->
-    <!-- <div class="inner-div">
-                <header class="intro">
-                    <br>
-                    <br>
-
-                </header>
-                <main class="main">
-                    <section >
-                        <h3>Questions</h3> -->
-    <!--will be created in JS-->
-
-    <!-- </section>
-                   
-                </main>
-            </div>
-
-        </div>
-
-    </div> -->
+    
     <script src="./assets/script.js"></script>
 </body>
 

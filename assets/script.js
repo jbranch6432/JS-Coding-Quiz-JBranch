@@ -4,10 +4,9 @@ var questEl = document.getElementById('quest-section');
 var results = document.querySelector('.Final-Display');
 var highScore = document.getElementById('Highscores');
 var firstScreen = document.getElementById('first');
-var submitBtn =  document.getElementById('submit');
+var submitBtn = document.getElementById('submit');
 var userInitials = document.getElementById('initials');
 var finalScore = document.getElementById('finalScore');
-
 
 
 
@@ -65,23 +64,21 @@ var questions = [
     }
 ]
 
-//Start button click
+//Start button click and begin Timer
 function startQuiz() {
     console.log("Start Quiz");
-    // beginQuiz('inner-div', 'question-div');
-    // firstQuestion();
     firstScreen.classList.add('hide')
     startTimer();
-    //console.log(questions[currentQuest].question);
     displayQuestion();
 };
 
+//Display quetsions to the page once quiz begins
 function displayQuestion() {
     questEl.innerHTML = ''
     var quest = questions[currentQuestIndex]
     var currentP = document.createElement("p");
     currentP.textContent = quest.question;
-    
+
     var choicesDiv = document.createElement('div')
     var choices = quest.answers;
     for (var i = 0; i < choices.length; i++) {
@@ -97,13 +94,13 @@ function displayQuestion() {
     questEl.append(currentP, choicesDiv);
 }
 
+//Subtract time from Timer if incorrect answer is selected
 function verifySelection() {
-    // // button.onclick = verifySelection;
     var userAnswer = this.getAttribute("correct");
     if (userAnswer === 'false') {
         secondsLeft -= 5;
     };
-    
+
     timer.textContent = secondsLeft;
 
     currentQuestIndex++
@@ -114,7 +111,7 @@ function verifySelection() {
         displayQuestion()
     }
 
-    
+
 
 }
 
@@ -122,28 +119,31 @@ function endQuiz() {
     clearInterval(timerInterval);
     questEl.classList.add('hide')
     results.classList.remove('hide')
+    // display the final score
+    finalScore.textContent = secondsLeft;
 }
 
-function submitScore(){
+//Allow users to save score with their initials.... 
+function submitScore() {
     var initials = userInitials.value.trim();
-    var score = secondsLeft;
+
     var scoreObj = {
         userInitial: initials,
-        userScore: score
+        userScore: secondsLeft
     };
-    console.log(scoreObj);
-
-    saveScore(scoreObj);
-//    console.log(recordInitials);
-}
-
-function saveScore(obj) {
-    console.log(obj);
+    // parses the data from localStorage. if it does not exists it will return an empty array
     var highScoreList = JSON.parse(localStorage.getItem("score")) || [];
-    highScoreList.push(obj);
+    
+    // add the new score object to the highscores array
+    highScoreList.push(scoreObj);
+    
+    // save the score array into local storage as a string
     localStorage.setItem("score", JSON.stringify(highScoreList));
-    finalScore.innerHTML = obj.userScore;
+
+    // we redirect the player to the highscore html
+    window.location.href = 'highscore.html'
 }
+
 
 //Timer function
 function startTimer() {
@@ -153,7 +153,7 @@ function startTimer() {
             secondsLeft--;
             timer.textContent = secondsLeft;
             if (secondsLeft <= 0) {
-                
+
                 endQuiz();
             }
         }, 1000);
@@ -163,5 +163,5 @@ function startTimer() {
 
 
 startButton.addEventListener("click", startQuiz);
-submitBtn.addEventListener('click', submitScore)
+submitBtn.addEventListener("click", submitScore);
 

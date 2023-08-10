@@ -1,6 +1,8 @@
 * {
-    margin: 0;
+    margin-top: 3%;
     padding: 0;
+    text-align: center;
+    
     background-color: rgb(151, 179, 179); 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -9,43 +11,7 @@
     display: none;
 }
 
-/* .outer-div {
-    padding: 20px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-}
 
-.inner-div {
-    height: 80vh;
-    width: 100%;
-    background-color: grey;
-    display: flexbox;
-    flex-direction: column;
-    justify-content: start;
-   
-}
-.nav-bar {
-    color: white;
-    height: 35px;
-    margin: 5%;
-    padding: 0;
-    position:sticky;
-    display: block;
-} */
-
-/*Counting timer for quiz*/
-/* .Timer {
-  float: right;  
-} */
-
-/*header to start the quiz with welcome*/
-/* .intro, .main {
-  text-align: center; 
-} */
-
-/*contains quiz*/
 
 
 button {
@@ -55,7 +21,3 @@ button {
 
 
 
-/* Final End of Quiz Display
-.Final-Display {
-    display: block;
-} */
