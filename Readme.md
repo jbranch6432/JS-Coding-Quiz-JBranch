@@ -22,7 +22,12 @@ The user can also clear their highscores history and retake the quiz using the t
 
 ## Link to deployed application
 
+Live URL:
 https://jbranch6432.github.io/JS-Coding-Quiz-JBranch/index.html
+
+GitHUb URL:
+https://github.com/jbranch6432/JS-Coding-Quiz-JBranch
+
 
 
 
