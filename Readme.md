@@ -13,12 +13,11 @@ The user can also clear their highscores history and retake the quiz using the t
 
 ### Page preview
 
-"C:\Users\schwu\UofR_CodingBootCamp\Coding_Class_Challenges\module4challenge_jbranch_codequiz\assets\images\Highscores_Page.png"
+![JavaScript_Begin_Quiz](./assets/images/JavaScript_Quiz.png)
 
-"C:\Users\schwu\UofR_CodingBootCamp\Coding_Class_Challenges\module4challenge_jbranch_codequiz\assets\images\JavaScript_Quiz.png"
+![End_of_Quiz](./assets/images/Quiz_End.png)
 
-"C:\Users\schwu\UofR_CodingBootCamp\Coding_Class_Challenges\module4challenge_jbranch_codequiz\assets\images\Quiz_End.png"
-
+![Highcsores_page](./assets/images/Highscores_Page.png)
 
 ## Link to deployed application
 
